@@ -1,0 +1,25 @@
+<%- include("header")-%>
+
+<div class="heading">
+    <h1>My Blogs</h1>
+    <div class="underline"></div>   
+</div>
+<form action="/" method='post'>
+    <button class="post-btn" name='button' value='post_page'>Add More...</button>
+</form>
+<div class='blogs-add'>
+    <% blogs.map((blog)=>{%>
+        <form action='/' method="post" class="blog-add">
+            <img src="<%=blog.image%>" alt="image" class="image-add">
+            <div class="title-content">
+                <h2><%=blog.title %></h2>
+                <p>
+                    <%=blog.content.substr(0,270) %>... <button name='button' type='submit' id="readmore" value=<%=blog._id%> >Read more.</button>
+                </p>
+            </div>
+        </form>
+
+    <% }) %>
+</ul>
+
+<%- include("footer")-%>

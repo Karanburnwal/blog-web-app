@@ -1,0 +1,21 @@
+<%- include("header")-%>
+
+<div class="heading">
+    <h1>Add Post</h1>
+    <div class="underline"></div>
+</div>
+
+<form id='add_post'action="/" method='post'>
+    <label for="title">Add Title*</label>
+    <input name='title' type="text" placeholder="Write title" autocomplete="off" required>
+    <label for="image" >Header Image Link
+        <input type="text" name="image" >
+    </label>
+    <br>
+    <label for="content">Add Content*</label>
+    <textarea name="content" id="content" cols="30" rows="10" placeholder="write Your content" required></textarea>
+    <button class='btn' name='button' type="submit" value='post'>Post</button>
+</form>
+
+
+<%- include("footer")-%>
